@@ -19,13 +19,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LaserDist
+namespace LiDAR
 {
     /// <summary>
     /// The class associated with the plugin to run the LaserDist
     /// part(s).
     /// </summary>
-    public class LaserDistModule : PartModule
+    public class LiDARModule : PartModule
     {
         private bool debugMsg = false;
         private bool debugLineDraw = false;
@@ -281,7 +281,7 @@ namespace LaserDist
         /// <param name="state"></param>
         public override void OnAwake()
         {
-            moduleName = "LaserDistModule";
+            moduleName = "LiDARModule";
             relLaserOrigin = new Vector3d(0.0,0.0,0.0);
             pqsTool = new LaserPQSUtil(part);
             pqsTool.tickPortionAllowed = (double) (CPUGreedyPercent / 100.0);

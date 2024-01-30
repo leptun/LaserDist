@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LaserDist
+namespace LiDAR
 {
     enum LevelBound { LOWEST, HIGHEST };
     

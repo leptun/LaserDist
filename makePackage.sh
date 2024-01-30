@@ -22,8 +22,8 @@ INSTALL_GAME_DIR="D:/SteamLibrary_2/steamapps/common/Kerbal Space Program"
 
 # Change this to "yes" if you want to install the ZIP to your game after it gets made:
 # Change this to "no" if you want to suppress the install to your game and just make the ZIP only:
-DO_INSTALL="yes"  
-# DO_INSTALL="no" 
+# DO_INSTALL="yes"  
+DO_INSTALL="no" 
 
 # ------------------------------------------------------------
 # YOU SHOULDN'T NEED TO ALTER THE LINES FROM HERE DOWN:
@@ -54,7 +54,7 @@ cp  LICENSE              "${EXPORT_DIR}/${MOD_NAME}"
 cp -r Parts "${EXPORT_DIR}/${MOD_NAME}/"
 cp -r LaserDist.version "${EXPORT_DIR}/${MOD_NAME}/"
 mkdir "${EXPORT_DIR}/${MOD_NAME}/Plugins"
-cp -r src/LaserDist/bin/${MODE}/LaserDist.dll "${EXPORT_DIR}/${MOD_NAME}/Plugins"
+cp -r src/LaserDist/bin/${MODE}/LiDAR.dll "${EXPORT_DIR}/${MOD_NAME}/Plugins"
 "$CMD_ZIP" "$CMD_ZIP_ARGS" a "${MOD_NAME}.zip" "${EXPORT_DIR}"
 
 if [ "$DO_INSTALL" = "yes" ]
